@@ -58,11 +58,6 @@ a {
   color: #ffffff;
 }
 
-.app-main {
-  width: min(1120px, 100%);
-  margin: 0 auto;
-  padding: 40px 8%;
-}
 
 @media (max-width: 560px) {
   .navbar {
