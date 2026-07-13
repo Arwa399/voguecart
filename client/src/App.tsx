@@ -1,8 +1,15 @@
 import AppRoutes from "./routes/AppRoutes";
+import Navbar from "./components/Navbar";
 
 function App() {
-  // return <h1>VogueCart</h1>;
-  return <AppRoutes />
+  return (
+    <>
+      <Navbar />
+      <main className="app-main">
+        <AppRoutes />
+      </main>
+    </>
+  );
 }
 
 export default App;
