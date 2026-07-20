@@ -1,3 +1,8 @@
+import heroSlide1 from "../../assets/images/hero/hero-slide-1.png";
+import heroSlide2 from "../../assets/images/hero/hero-slide-2.png";
+import heroSlide3 from "../../assets/images/hero/hero-slide-3.png";
+
+
 interface HeroSlideData{
         id: number,
         title: string,
@@ -10,7 +15,7 @@ const slides: HeroSlideData[] = [{
     id: 1,
     title: "Welcome to Our Store",
     description: "Discover the latest trends and styles.",
-    image: "/path/to/image1.jpg",
+    image: heroSlide1,
     buttons: [
         {
             text: "Shop Now",
@@ -22,7 +27,7 @@ const slides: HeroSlideData[] = [{
     id: 2,
     title: "New Arrivals",
     description: "Check out our newest products.",
-    image: "/path/to/image2.jpg", 
+    image: heroSlide2,
     buttons: [
         {
             text: "View Details",
@@ -34,7 +39,7 @@ const slides: HeroSlideData[] = [{
     id: 3,
     title: "Exclusive Offers",
     description: "Don't miss out on our special deals.",
-    image: "/path/to/image3.jpg",
+    image: heroSlide3,
     buttons: [
         {
             text: "Get Offer", 

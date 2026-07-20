@@ -1,5 +1,5 @@
 import slides from "./HeroData";
-import HeroSlide from "./HeroSlide";
+import HeroSlide from "./HeroSlide/HeroSlide";
 
 function Hero() {
   const slide = slides[0];

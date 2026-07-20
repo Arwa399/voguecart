@@ -1,16 +1,13 @@
 import { NavLink } from "react-router-dom";
-
-const links = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
-];
+import "./Navbar.css";
+import { links, actions } from "./NavbarData";
+import { FiSearch } from "react-icons/fi";
 
 function Navbar() {
   return (
     <header className="navbar">
       <NavLink to="/" className="navbar__brand">
-        VogueCart
+        <span className="logo">VOGUECART</span>
       </NavLink>
 
       <nav className="navbar__links" aria-label="Main navigation">
@@ -24,6 +21,18 @@ function Navbar() {
             }
           >
             {link.label}
+          </NavLink>
+        ))}
+      </nav>
+
+      <nav className="navbar__actions" aria-label="User navigation">
+        <button className="search-btn" aria-label="Search">
+          <FiSearch />
+        </button>
+
+        {actions.map((action) => (
+          <NavLink key={action.to} to={action.to} className="navbar__link">
+            {action.label}
           </NavLink>
         ))}
       </nav>
