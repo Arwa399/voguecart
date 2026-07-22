@@ -9,9 +9,4 @@ const links :NavbarItem[]= [
   { to: "/contact", label: "Contact" },
 ];
 
-const actions :NavbarItem[]= [
-  { to: "/cart", label: "Cart" },
-  {to: "/account", label: "Account" },
-];
-
-export {links, actions};
+export {links};

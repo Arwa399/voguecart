@@ -1,8 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
-import { links, actions } from "./NavbarData";
-import { FiSearch } from "react-icons/fi";
-
+import { links } from "./NavbarData";
+import { FiSearch, FiUser, FiShoppingBag } from "react-icons/fi";
 function Navbar() {
   return (
     <header className="navbar">
@@ -26,15 +25,17 @@ function Navbar() {
       </nav>
 
       <nav className="navbar__actions" aria-label="User navigation">
-        <button className="search-btn" aria-label="Search">
+        <NavLink to="/search" className="navbar__icon">
           <FiSearch />
-        </button>
+        </NavLink>
 
-        {actions.map((action) => (
-          <NavLink key={action.to} to={action.to} className="navbar__link">
-            {action.label}
-          </NavLink>
-        ))}
+        <NavLink to="/account" className="navbar__icon">
+          <FiUser />
+        </NavLink>
+
+        <NavLink to="/cart" className="navbar__icon">
+          <FiShoppingBag />
+        </NavLink>
       </nav>
     </header>
   );
