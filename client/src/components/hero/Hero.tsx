@@ -1,28 +1,35 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HeroSlide from "./HeroSlide/HeroSlide";
-import slides  from "./HeroData";
-
-
+import slides from "./HeroData";
 
 function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  console.log(slides[currentSlide]);
+  // console.log(slides[currentSlide]);
 
   const nextSlide = () => {
-  if (currentSlide === slides.length - 1) {
-    setCurrentSlide(0);
-  } else {
-    setCurrentSlide(currentSlide + 1);
-  }
-};
-  const prevSlide = () => {
-    if (currentSlide == 0){
-      setCurrentSlide(slides.length-1)
-    } else{
-      setCurrentSlide (currentSlide -1);
-    }
-  }
+    setCurrentSlide((prev) => {
+      if (prev === slides.length - 1) {
+        return 0;
+      }
+      return prev + 1;
+    });
+  };
 
+  const prevSlide = () => {
+    setCurrentSlide((prev) => {
+      if (prev === 0) {
+        return slides.length - 1;
+      }
+      return prev - 1;
+    });
+  };
+
+  useEffect(() => {
+     const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+     return () => {clearInterval(interval)}
+  }, []);
 
   return (
     <>
@@ -32,7 +39,5 @@ function Hero() {
     </>
   );
 }
-
-
 
 export default Hero;
