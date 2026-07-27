@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import type { HeroSlideData } from "../HeroData";
+import type { HeroSlideData } from "./HeroData";
 import "./HeroSlide.css";
 
 

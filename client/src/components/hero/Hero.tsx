@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import HeroSlide from "./HeroSlide/HeroSlide";
+import HeroSlide from "./HeroSlide";
 import slides from "./HeroData";
+import "./Hero.css";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -25,17 +27,25 @@ function Hero() {
   };
 
   useEffect(() => {
-     const interval = setInterval(() => {
+    const interval = setInterval(() => {
       nextSlide();
     }, 5000);
-     return () => {clearInterval(interval)}
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   return (
     <>
       <HeroSlide slide={slides[currentSlide]} />
-      <button onClick={nextSlide}>next</button>
-      <button onClick={prevSlide}>prev</button>
+
+      <button className="hero__arrow hero__arrow--left" onClick={prevSlide}>
+        <FaChevronLeft />
+      </button>
+
+      <button className="hero__arrow hero__arrow--right" onClick={nextSlide}>
+        <FaChevronRight />
+      </button>
     </>
   );
 }

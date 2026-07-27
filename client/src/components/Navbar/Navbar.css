@@ -10,16 +10,14 @@
   width: 100%;
   padding: 1rem 5%;
 
-  background: transparent;
-  transition: all 0.3s ease;
+  background: var(--color-surface);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 
   z-index: 1000;
-}
-
-.navbar.scrolled {
-  background: rgba(20, 20, 20, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* ========= Brand ========= */
@@ -34,17 +32,26 @@
 .logo {
   font-family: "Cormorant Garamond", serif;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
 
   letter-spacing: 0.3rem;
   text-transform: uppercase;
+}
 
-  color: #ffffff;
+.logo__primary {
+  color: var(--color-text);
+
   transition: color 0.3s ease;
 }
 
-.logo:hover {
-  color: #d4bfa4;
+.logo__secondary {
+  color: var(--color-secondary);
+  transition: color 0.3s ease;
+}
+
+.navbar__brand:hover .logo__primary,
+.navbar__brand:hover .logo__secondary {
+  color: var(--color-accent);
 }
 
 /* ========= Navigation ========= */
@@ -58,7 +65,7 @@
 }
 
 .navbar__link {
-  color: #ffffff;
+  color: var(--color-text);
   text-decoration: none;
 
   transition: color 0.3s ease;
@@ -66,7 +73,7 @@
 
 .navbar__link:hover,
 .navbar__link--active {
-  color: #d4bfa4;
+  color: var(--color-secondary);
 }
 
 /* ========= Actions ========= */
@@ -76,6 +83,7 @@
   align-items: center;
   justify-content: flex-end;
   gap: 1.5rem;
+
   width: 100%;
 }
 
@@ -84,7 +92,7 @@
   align-items: center;
   justify-content: center;
 
-  color: #ffffff;
+  color: var(--color-text);
   text-decoration: none;
 
   font-size: 1.25rem;
@@ -95,6 +103,6 @@
 }
 
 .navbar__icon:hover {
-  color: #d4bfa4;
+  color: var(--color-secondary);
   transform: translateY(-2px);
 }

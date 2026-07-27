@@ -6,7 +6,10 @@ function Navbar() {
   return (
     <header className="navbar">
       <NavLink to="/" className="navbar__brand">
-        <span className="logo">VOGUECART</span>
+        <span className="logo">
+          <span className="logo__primary">VOGUE</span>
+          <span className="logo__secondary">CART</span>
+        </span>
       </NavLink>
 
       <nav className="navbar__links" aria-label="Main navigation">
