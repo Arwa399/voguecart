@@ -6,6 +6,7 @@
 }
 .featured__heading {
   text-transform: uppercase;
+  
 }
 .featured__line{
     width:4rem;
@@ -33,7 +34,7 @@
     height:100%;
     object-fit:cover;
     transition:transform .4s;
-    border-radius:16px;
+    border-radius:16px 16px 0 0;
 }
 .productCard:hover img {
   transform: scale(1.05);

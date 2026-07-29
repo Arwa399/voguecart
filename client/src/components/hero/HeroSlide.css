@@ -1,8 +1,9 @@
 .heroSection{
     position: relative;
     height: 100vh;
+    /* margin-top: 100px; */
     background-size: cover;
-    background-position: center;
+    background-position: center 25%; 
     background-repeat: no-repeat;
 }
 .overlay{

@@ -4,19 +4,26 @@
   box-sizing: border-box;
 }
 body {
-  background-color: var(--color-primary);
+  --color-bg: #E5DBD3;
 }
 
+h1,
+h2,
+h3,
+.logo {
+  font-family: "Cormorant Garamond", serif;
+}
 :root {
-  --color-primary: #D4BFA4;
-  --color-secondary: #A87449;
-  --color-accent: #7A5A43;
+  --color-primary: #d4bfa4;
+  --color-secondary: #a87449;
+  --color-accent: #7a5a43;
 
-  --color-bg: #F8F5F1;
-  --color-surface: #FFFDF9;
+  --color-bg: #f8f5f1;
+  --color-surface: #fffdf9;
 
-  --color-text: #2F2A27;
-  --color-text-muted: #8A8178;
-  --color-white: #FFFFFF;
-
+  --color-text: #2f2a27;
+  --color-text-muted: #8a8178;
+  --color-white: #ffffff;
+  --color-button: #965C2D;
+  --color-button-hover: #744520;
 }
